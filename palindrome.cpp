@@ -37,11 +37,11 @@ bool validPalindrome(string s)
     // TODO: Based on the mathematical definition in the
     // handout, implement the details of the recursive
     // isPalindrome function.
-
-    int n = s.length();
-    for (int i = 0; i < n / 2; i++) {
-      if (s[i] != s[n - i -1]) return false;
+    int len = s.length();
+    if (len <= 1) {
+      return true;
+    } else {
+        return s[0] == s[len -1]
+        && validPalindrome(s.substr(1, len -2));
     }
-
-    return true; // original code had false 
-}
+  }
