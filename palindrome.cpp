@@ -43,5 +43,5 @@ bool validPalindrome(string s)
       if (s[i] != s[n - i -1]) return false;
     }
 
-    return true;
+    return true; // original code had false 
 }
