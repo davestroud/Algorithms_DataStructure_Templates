@@ -1,0 +1,10 @@
+civic=1
+stacks=0
+hannah=1
+noel sees leon=1
+tree=0
+kayak=1
+graph=0
+alula=1
+
+Press any key to continue.
