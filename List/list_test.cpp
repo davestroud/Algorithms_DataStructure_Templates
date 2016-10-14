@@ -136,13 +136,14 @@ list<Object> getIntersection(list<Object> list1, list<Object> list2)
    // TODO: Implement the details of the getIntersection function
    // here.
    typename list<Object>::iterator itr;
-   for (itr = list1.begin(); itr != list1.end(); itr++)
-   {
-     Object value = (*itr);
-     cout << " " << value;
-   }
+     for (itr = list1.begin(); itr != list1.end(); itr++)
+     {
+       // Get the contents of each node
+       Object value = (*itr);
 
-
+       // Print the value of the node
+       cout << " " << value;
+     }
 
    return resultList;
 }
