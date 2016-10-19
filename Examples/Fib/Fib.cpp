@@ -1,10 +1,10 @@
-/* 
+#/*
  * Module: Fib.cpp
  *
  * Description: This module uses recursion to calculate the
  *              Fibonacci number for a provided number.
  *
- * Course: CS3330 Data Structures and Algorithms 
+ * Course: CS3330 Data Structures and Algorithms
  * Author: Dr. Jack Davault
  */
 
@@ -23,11 +23,11 @@ int main(int argc, char **argv)
    {
       cout << Fib(i) << ", ";
    }
-   cout << "..." << endl; 
-	
+   cout << "..." << endl;
+
    cout << endl << "Press any key to continue ..." << endl;
    getchar();
-	
+
    return 0;
 }
 
@@ -41,9 +41,8 @@ int Fib(int n)
   }
   else
   {
-      value = Fib(n-2) + Fib(n-1); 
+      value = Fib(n-2) + Fib(n-1);
   }
 
   return value;
 }
-
