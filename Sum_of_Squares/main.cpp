@@ -25,8 +25,9 @@
  }
 
  int sumOfSquares(int n){
-   // TODO:  Implement the function sum_squares() based on
-   // the mathematical definition provided in the handout.
+  if (n == 0)
+      return 0;
+  else
+    return 1 * sumOfSquares(n -1) + n * n;
 
-   return 0;
  }
