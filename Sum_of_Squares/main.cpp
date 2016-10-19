@@ -28,6 +28,6 @@
   if (n == 0)
       return 0;
   else
-    return 1 * sumOfSquares(n -1) + n * n;
+    return sumOfSquares(n -1) + n * n;
 
  }
