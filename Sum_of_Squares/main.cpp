@@ -2,7 +2,7 @@
  * sumOfSquares.cpp - This progam implements the sumOfSquares() function
  *                   described in the handout.
  *
- * Name and Course Number: John 'David Stroud' CS 3330
+ * Name and Course Number: John 'David' Stroud CS 3330
  */
 
  #include <cstdio>
@@ -28,6 +28,5 @@
   if (n == 0)
       return 0;
   else
-    return sumOfSquares(n -1) + n * n;
-
+    return sumOfSquares(n -1) + n * n; // Makes the recursive call 
  }
