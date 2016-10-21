@@ -1,11 +1,11 @@
-/* 
+/*
  * Module: factorial.cpp
  *
  * Description: This module uses factorial functions to show the
- *              difference between recusive and non-recusive 
+ *              difference between recusive and non-recusive
  *              implementations.
  *
- * Course: CS3330 Data Structures and Algorithms 
+ * Course: CS3330 Data Structures and Algorithms
  * Author: Dr. Jack Davault
  */
 
@@ -21,10 +21,10 @@ int main(int argc, char **argv)
 {
    cout << "The factorial(4)  = " << factorial(4) << endl;
    cout << "The factorial2(4) = " << factorial2(4) << endl;
-   
+
    cout << endl << "Press any key to continue ..." << endl;
    getchar();
-   
+
    return 0;
 }
 
@@ -35,7 +35,7 @@ int main(int argc, char **argv)
 int factorial(int n)
 {
    int f=0;
-   
+
    if (n <= 1)
    {
         f=1;
@@ -48,7 +48,7 @@ int factorial(int n)
          f = f * i;
       }
    }
-   
+
    return f;
 }
 
@@ -58,12 +58,11 @@ int factorial(int n)
 int factorial2(int n)
 {
    int f=0;
-   
+
    if (n <= 1) // This is the termination case
       f = 1;
    else // This is the recursive case
       f = n * factorial2(n - 1);
-   
+
    return f;
 }
-   
