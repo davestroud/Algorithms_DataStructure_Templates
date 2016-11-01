@@ -1,9 +1,9 @@
-/* 
+/*
  * Module: some_function.cpp
  *
  * Description: This module shows an example of tail recursion.
  *
- * Course: CS3330 Data Structures and Algorithms 
+ * Course: CS3330 Data Structures and Algorithms
  * Author: Dr. Jack Davault
  */
 
@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 
    cout << endl << "Press any key to continue ..." << endl;
    getchar();
-	
+
    return 0;
 }
 
@@ -36,4 +36,3 @@ int some_function(int i)
 
   return 0;
 }
-     
