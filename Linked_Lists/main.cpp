@@ -12,5 +12,8 @@ int main(int argc, char const *argv[]) {
   list.appendNode(2.5);
   list.appendNode(7.9);
   list.appendNode(12.6);
+
+  // Display the values in the list
+  list.displayList();
   return 0;
 }

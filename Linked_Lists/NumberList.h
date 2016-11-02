@@ -3,6 +3,7 @@
 #define NUMBERLIST_H
 
 class NumberList {
+
 private:
   // Declare a structure for the list
   struct ListNode {
@@ -15,7 +16,7 @@ private:
 public:
   // Constructor
   NumberList()
-    { head = NULL; }
+    { head = nullptr; }
 
   // Destructor
   ~NumberList();
