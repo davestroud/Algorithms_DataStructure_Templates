@@ -29,7 +29,7 @@ int main(int argc, char const *argv[]) {
         if(*it == 1) {
             it = numbers.erase(it);
         } else {
-            it++
+            it++;
         }
     }
 
