@@ -91,5 +91,6 @@ list<Object> getElements(list<Object> L, list<int> P)
 
    // TODO: Implement the details for the function.
 
+
    return resultList;
 }
