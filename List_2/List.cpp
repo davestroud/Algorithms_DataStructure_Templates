@@ -99,6 +99,16 @@ list<Object> getElements(list<Object> L, list<int> P)
      // Print the value of the node
      cout << " " << value;
 
+     /**typename list<Object>::iterator itr;
+     for (itr = L.begin(); itr != L.end(); itr++) {
+
+       // Get the contents of each node
+       Object value = (*itr);
+
+       // Print the value of the node
+       cout << " " << value;
+
+     } */
    }
 
    return resultList;
