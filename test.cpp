@@ -1,19 +1,20 @@
-#include <stdio.h>
-
-int factorial(int n)
-{
-        int previous = 0xdeadbeef;
-
-        if (n <= 1) {
-          return 1;
-        }
-        
-        previous = factorial(n-1);
-        return n * previous;
-}
+#include <iostream>
+#include <vector>
+namespace std
 
 int main(int argc, char const *argv[]) {
-  int answer = factorial(5);
-  printf("%d\n", answer);
+
+  vector<string> strings;
+
+  strings.push_back("one");
+  strings.push_back("two");
+  strings.push_back("three");
+
+  for (vector<string>::iterator it = strings.begin(); it != strings.end()
+      it++) {
+        cout << *it <<endl;
+      }
+
+  
   return 0;
 }

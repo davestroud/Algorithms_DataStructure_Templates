@@ -80,7 +80,7 @@ void printList(list<Object> list1)
 
    cout << endl;
 
-   return;c
+   return;
 }
 
 template <class Object>
