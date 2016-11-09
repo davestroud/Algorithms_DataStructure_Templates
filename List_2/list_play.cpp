@@ -91,14 +91,21 @@ list<Object> getElements(list<Object> L, list<int> P)
 
    // TODO: Implement the details for the function.
    typename list<int>::iterator itr;
+   typename list<Object>::iterator itr2;
 
    for (itr = P.begin(); itr != P.end(); itr++) {
+     for (itr2 = L.begin(); itr2 != L.end(); itr2++) {
+       int index = 0;
+       int position = (*itr);
+     }
 
      // Get the contents of each node
      int value = (*itr);
 
      // Print the value of the node
      cout << " " << value;
+
+     //resultList.push_back(itr2);
 
    }
 

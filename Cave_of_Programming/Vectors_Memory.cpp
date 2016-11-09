@@ -4,7 +4,7 @@ using namespace std;
 
 int main(int argc, char const *argv[]) {
 
-  vector<double> numbers(20);
+  vector<double> numbers(0);
 
   cout << "Size: " << numbers.size() << endl;
 
@@ -19,7 +19,13 @@ int main(int argc, char const *argv[]) {
     }
 
     numbers.push_back(i);
-
   }
+
+  numbers.reserve(10000);
+  cout << numbers[2] << endl;
+  cout << "Size: " << numbers.size() << endl;
+  cout << "Capacity: " << numbers.capacity() << endl;
+
+
   return 0;
 }

@@ -1,20 +1,20 @@
+// list::push_back
 #include <iostream>
-#include <vector>
-namespace std
+#include <list>
 
-int main(int argc, char const *argv[]) {
+int main ()
+{
+  std::list<int> mylist;
+  int myint;
 
-  vector<string> strings;
+  std::cout << "Please enter some integers (enter 0 to end):\n";
 
-  strings.push_back("one");
-  strings.push_back("two");
-  strings.push_back("three");
+  do {
+    std::cin >> myint;
+    mylist.push_back (myint);
+  } while (myint);
 
-  for (vector<string>::iterator it = strings.begin(); it != strings.end()
-      it++) {
-        cout << *it <<endl;
-      }
+  std::cout << "mylist stores " << mylist.size() << " numbers.\n";
 
-  
   return 0;
 }
