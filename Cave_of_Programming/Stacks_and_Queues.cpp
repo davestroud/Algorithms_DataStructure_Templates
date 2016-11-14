@@ -10,8 +10,6 @@ private:
 public:
   Test(string name):
             name(name) {
-
-
             }
 
             ~Test() {
@@ -22,7 +20,6 @@ public:
                 cout << name << endl;
             }
 };
-
 
 int main(int argc, char const *argv[]) {
 
@@ -71,7 +68,7 @@ int main(int argc, char const *argv[]) {
 
   testQueue.back().print(); // Last person to enter queue.
 
-  cout << endl; 
+  cout << endl;
 
   while(testQueue.size() > 0) {
     Test &test = testQueue.front();
