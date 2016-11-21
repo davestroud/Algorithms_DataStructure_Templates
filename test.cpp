@@ -1,20 +1,13 @@
-// list::push_back
-#include <iostream>
-#include <list>
+#include<stdio.h>
 
-int main ()
-{
-  std::list<int> mylist;
-  int myint;
-
-  std::cout << "Please enter some integers (enter 0 to end):\n";
-
-  do {
-    std::cin >> myint;
-    mylist.push_back (myint);
-  } while (myint);
-
-  std::cout << "mylist stores " << mylist.size() << " numbers.\n";
-
+int main() {
+  int a;
+  int* p;
+  a = 10;
+  p = &a; //&a = address of a
+  printf("a = %d\n",p);
+  *p = 12;  // dereferencing
+  printf("a = %d\n",*p);
+  printf("%d\n",&a);
   return 0;
 }

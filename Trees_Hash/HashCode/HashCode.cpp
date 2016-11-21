@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 {
    string data[] = {
        "Bones", "Scotty", "Chekov", "Uhura", "Sulu", "Nurse Chapel",
-	   "Dax", "O'Brien", "Quark", "Dr. Bashier", "Kira", "B'Elanna",     
+	   "Dax", "O'Brien", "Quark", "Dr. Bashier", "Kira", "B'Elanna",
        "Picard", "Riker", "Data", "La Forge", "Worf", "Dr. Crusher",
        "Reed", "Travis", "Hoshi", "Dr. Phlox", "Kirk", "Spock",
        "Dr. Pulaski", "Wesley", "Troi", "Tasha", "Sisko", "Odo"
@@ -52,7 +52,7 @@ int main(int argc, char **argv)
 
 int calcHashCode(string key)
 {
-   // TODO: Use a loop to add together the ASCII value of 
+   // TODO: Use a loop to add together the ASCII value of
    // each character in the given string s.
    //
    // HINT: You can get the length of the string by calling the
@@ -68,7 +68,7 @@ void insertHash(int hashCode, string item)
    // at the hashCode position. Print an error message
    // if the position is occupied and do not insert
    // the string into the hash table.
-   // 
+   //
    // HINT: the hashTable variable is an array. The
    // position in the hashTable is occupied if the size()
    // or length() of the position is greater than 0.
@@ -91,4 +91,3 @@ void displayTable()
 
    return;
 }
-
