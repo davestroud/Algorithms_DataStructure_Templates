@@ -34,11 +34,11 @@ public:
 template<class T>
 class BSTNode {
 public:
-    BSTNode() { 
-        left = right = 0; 
+    BSTNode() {
+        left = right = 0;
     }
     BSTNode(const T& el, BSTNode *l = 0, BSTNode *r = 0) {
-        key = el; left = l; right = r; 
+        key = el; left = l; right = r;
     }
     T key;
     BSTNode *left, *right;
@@ -47,29 +47,29 @@ public:
 template<class T>
 class BST {
 public:
-    BST() { 
-        root = 0; 
+    BST() {
+        root = 0;
     }
-    ~BST() { 
+    ~BST() {
         clear();
     }
     void clear() {
         clear(root); root = 0;
     }
-    bool isEmpty() const { 
-        return root == 0; 
+    bool isEmpty() const {
+        return root == 0;
     }
-    void preorder() { 
-        preorder(root);   
+    void preorder() {
+        preorder(root);
     }
-    void inorder() { 
-        inorder(root); 
+    void inorder() {
+        inorder(root);
     }
-    void postorder() { 
-        postorder(root);  
+    void postorder() {
+        postorder(root);
     }
     void insert(const T&);
-    T* search(const T& el) const { 
+    T* search(const T& el) const {
         return search(root,el);
     }
     void deleteByCopying(BSTNode<T>*&);
@@ -91,8 +91,8 @@ protected:
     void preorder(BSTNode<T>*);
     void inorder(BSTNode<T>*);
     void postorder(BSTNode<T>*);
-    void visit(BSTNode<T>* p) { 
-        cout << p->key << ' '; 
+    void visit(BSTNode<T>* p) {
+        cout << p->key << ' ';
     }
 };
 
@@ -106,7 +106,7 @@ void BST<T>::clear(BSTNode<T> *p) {
 }
 
 template<class T>
-void BST<T>::insert(const T& el) {   
+void BST<T>::insert(const T& el) {
     BSTNode<T> *p = root, *prev = 0;
     while (p != 0) {        // find a place for inserting new node;
         prev = p;
@@ -160,10 +160,10 @@ void BST<T>::postorder(BSTNode<T>* p) {
 }
 
 template<class T>
-void BST<T>::deleteByCopying(BSTNode<T>*& node) {    
+void BST<T>::deleteByCopying(BSTNode<T>*& node) {
     BSTNode<T> *previous, *tmp = node;
      if (node->right == 0)                  // node has no right child;
-          node = node->left;   
+          node = node->left;
      else if (node->left == 0)              // node has no left child;
           node = node->right;
      else {
@@ -185,7 +185,7 @@ void BST<T>::deleteByCopying(BSTNode<T>*& node) {
 // el. If the node is located, the function DeleteByCopying() is called.
 
 template<class T>
-void BST<T>::findAndDeleteByCopying(const T& el) {    
+void BST<T>::findAndDeleteByCopying(const T& el) {
     BSTNode<T> *p = root, *prev = 0;
      while (p != 0 && !(p->key == el)) {
          prev = p;
@@ -205,7 +205,7 @@ void BST<T>::findAndDeleteByCopying(const T& el) {
 }
 
 template<class T>
-void BST<T>::deleteByMerging(BSTNode<T>*& node) {   
+void BST<T>::deleteByMerging(BSTNode<T>*& node) {
     BSTNode<T> *tmp = node;
     if (node != 0) {
         if (!node->right)           // node has no right child: its left
@@ -227,7 +227,7 @@ void BST<T>::deleteByMerging(BSTNode<T>*& node) {
 }
 
 template<class T>
-void BST<T>::findAndDeleteByMerging(const T& el) {    
+void BST<T>::findAndDeleteByMerging(const T& el) {
     BSTNode<T> *node = root, *prev = 0;
     while (node != 0) {
         if (node->key == el)
@@ -249,7 +249,7 @@ void BST<T>::findAndDeleteByMerging(const T& el) {
 }
 
 template<class T>
-void BST<T>::iterativePreorder() {    
+void BST<T>::iterativePreorder() {
     Stack<BSTNode<T>*> travStack;
     BSTNode<T> *p = root;
     if (p != 0) {
@@ -266,7 +266,7 @@ void BST<T>::iterativePreorder() {
 }
 
 template<class T>
-void BST<T>::iterativeInorder() {    
+void BST<T>::iterativeInorder() {
     Stack<BSTNode<T>*> travStack;
     BSTNode<T> *p = root;
     while (p != 0) {
@@ -289,7 +289,7 @@ void BST<T>::iterativeInorder() {
 }
 
 template<class T>
-void BST<T>::iterativePostorder() {    
+void BST<T>::iterativePostorder() {
     Stack<BSTNode<T>*> travStack;
     BSTNode<T>* p = root, *q = root;
     while (p != 0) {
@@ -308,7 +308,7 @@ void BST<T>::iterativePostorder() {
 }
 
 template<class T>
-void BST<T>::breadthFirst() {    
+void BST<T>::breadthFirst() {
     Queue<BSTNode<T>*> queue;
     BSTNode<T> *p = root;
     if (p != 0) {
@@ -325,7 +325,7 @@ void BST<T>::breadthFirst() {
 }
 
 template<class T>
-void BST<T>::MorrisInorder() {   
+void BST<T>::MorrisInorder() {
     BSTNode<T> *p = root, *tmp;
     while (p != 0)
         if (p->left == 0) {

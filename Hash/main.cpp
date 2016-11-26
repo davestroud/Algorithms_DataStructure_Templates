@@ -1,10 +1,20 @@
-#include <cstlib>
+#include <cstdlib>
 #include <iostream>
-#include <stream>
+#include <string>
+#include "hash.h"
 
 using namespace std;
 
 int main(int argc, char const *argv[]) {
-  /* code */
+
+
+  int index;
+  hash hashObj;
+
+  index = hashObj.Hash("David");
+
+  cout << "index =  " << index << endl;
+
   return 0;
+
 }
