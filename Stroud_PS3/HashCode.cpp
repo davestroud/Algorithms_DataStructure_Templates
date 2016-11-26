@@ -11,9 +11,9 @@ void displayTable();
 
 const int TABLE_SIZE = 2048;
 
-string hashTable[TABLE_SIZE];
+string hashTable[TABLE_SIZE]; // don't understand what this does??
 
-int main(int argc, char **argv)
+int main(int argc, char **argv) // why the two **'s
 {
   string data[] = {
       "Bones", "Scotty", "Chekov", "Uhura", "Sulu", "Nurse Chapel",
@@ -22,6 +22,23 @@ int main(int argc, char **argv)
       "Reed", "Travis", "Hoshi", "Dr. Phlox", "Kirk", "Spock",
       "Dr. Pulaski", "Wesley", "Troi", "Tasha", "Sisko", "Odo"
   };
+
+  const int numberOfDataItems = 30;
+  int hash = 0;
+
+  for (int i = 0; i < numberOfDataItems; i++)
+  {
+    hash = calcHashCode(data[i]);
+    cout << data[i] << " hashCode=" << hash << endl;
+    insertHash(hash, data[i]);
+  }
+
+  displayTable();
+
+  cout << "\n** Press any key to continue **\n";
+  getchar();
+
+  return 0;
 }
 
 int calcHashCode(string key)
