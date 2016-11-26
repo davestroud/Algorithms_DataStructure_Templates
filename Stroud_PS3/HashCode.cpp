@@ -11,6 +11,19 @@ void displayTable();
 
 const int TABLE_SIZE = 2048;
 
+string hashTable[TABLE_SIZE];
+
+int main(int argc, char **argv)
+{
+  string data[] = {
+      "Bones", "Scotty", "Chekov", "Uhura", "Sulu", "Nurse Chapel",
+      "Dax", "O'Brien", "Quark", "Dr. Bashier", "Kira", "B'Elanna",
+      "Picard", "Riker", "Data", "La Forge", "Worf", "Dr. Crusher",
+      "Reed", "Travis", "Hoshi", "Dr. Phlox", "Kirk", "Spock",
+      "Dr. Pulaski", "Wesley", "Troi", "Tasha", "Sisko", "Odo"
+  };
+}
+
 int calcHashCode(string key)
 {
   // TODO: Use a loop to add together the ASCII value of

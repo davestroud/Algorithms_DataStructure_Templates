@@ -17,7 +17,7 @@ int calcHashCode(string key);
 void insertHash(int hashCode, string item);
 void displayTable();
 
-const int TABLE_SIZE = 0; // TODO: change 0 to be the size of the 
+const int TABLE_SIZE = 0; // TODO: change 0 to be the size of the
                           // hash table here this should be set to
                           // value indicated in the handout.
 string hashTable[TABLE_SIZE];
