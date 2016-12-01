@@ -11,7 +11,7 @@ void displayTable();
 
 const int TABLE_SIZE = 2048;
 
-string hashTable[TABLE_SIZE]; // don't understand what this does??
+string hashTable[TABLE_SIZE]; // size declarator for string array
 
 int main(int argc, char **argv) // why the two **'s
 {
@@ -29,13 +29,13 @@ int main(int argc, char **argv) // why the two **'s
   for (int i = 0; i < numberOfDataItems; i++)
   {
     hash = calcHashCode(data[i]);
-    cout << data[i] << " hashCode=" << hash << endl;
+    cout << data[i] << " hashCode = " << hash << endl;
     insertHash(hash, data[i]);
   }
 
   displayTable();
 
-  cout << "\n** Press any key to continue **\n";
+  cout <<"\n** Press any key to continue **\n";
   getchar();
 
   return 0;
@@ -43,36 +43,14 @@ int main(int argc, char **argv) // why the two **'s
 
 int calcHashCode(string key)
 {
-  int sum = 0;
-  int index;
-  sum = sum + static_cast<int>(key[index]);
-
-  for (int i = 0; i != '\0'; i++)
-  {
-
-    if (hashTable[i].length() > 0)
-    {
-      cout << i << "\t" << hashTable[i] << endl;
-    }
-  }
-
-  return sum % TABLE_SIZE;
+  return 0;
 }
 
 void insertHash(int hashCode, string item)
 {
-  // TODO: Implement the details of this function.
-  // This function should insert items in the hashTable
-  // at the hashCode position. Print an error message
-  // if the position is occupied and do not insert
-  // the string into the hash table.
-  //
-  // HINT: the hashTable variable is an array. The
-  // position in the hashTable is occupied if the size()
-  // or length() of the position is greater than 0.
-
   return;
 }
+
 
 void displayTable()
 {
