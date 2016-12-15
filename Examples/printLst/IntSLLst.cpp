@@ -1,9 +1,7 @@
+#include <iostream>
+#include "IntSLLst.h"
 
 using namespace std; // For cout functions
-
-#include <iostream>
-
-#include "IntSLLst.h"
 
 IntSLLst::~IntSLLst()
 {
@@ -33,7 +31,7 @@ void IntSLLst::addToTail(int el)
 	}
 	else
 	{
-		head = tail = new IntSLLNode(el);	
+		head = tail = new IntSLLNode(el);
 	}
 }
 
@@ -97,7 +95,7 @@ void IntSLLst::deleteNode(int el)
 			}
 		}
 }
-			
+
 bool IntSLLst::isInList(int el) const
 {
 	IntSLLNode *tmp;
@@ -121,8 +119,8 @@ IntSLLNode *IntSLLst::getNode(int value)
 	{
 	   if (tmp->info == value)
 	     break;
-		     
-	   tmp = tmp->next; 
+
+	   tmp = tmp->next;
 	}
 
 	return tmp;
@@ -137,7 +135,7 @@ void IntSLLst::printLst()
 		cout << tmp->info << " ";
 	}
 	cout << endl;
-	
+
 	return;
 }
 // Print all of the nodes in the current list
@@ -145,12 +143,11 @@ void IntSLLst::printLst2(IntSLLNode *tmp)
 {
 	if (tmp == 0)  // If the node equals 0, we're done!
 	  return;
-    
+
 	// We will only get here if the exit condition is not true.
 	cout << tmp->info << " ";
 	tmp = tmp->next;
   	printLst2(tmp);  // Continue processing...
-    	
+
 	return;
 }
-

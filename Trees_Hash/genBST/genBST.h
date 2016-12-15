@@ -12,7 +12,7 @@ template<class T>
 class Stack : public stack<T> {
 public:
     T pop() {
-        T tmp = top();
+        T tmp = this-> top();
         stack<T>::pop();
         return tmp;
     }
@@ -22,7 +22,7 @@ template<class T>
 class Queue : public queue<T> {
 public:
     T dequeue() {
-        T tmp = front();
+        T tmp = this-> front();
         queue<T>::pop();
         return tmp;
     }

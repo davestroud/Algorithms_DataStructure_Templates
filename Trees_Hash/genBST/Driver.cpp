@@ -1,27 +1,27 @@
 /*
  * Driver.cpp - Sample program to test the BST API:
  * found in  Drozdek (2005).
- * 
+ *
  * Author: Dr. Jack Davault, Troy University.
- * 
+ *
  * Ref:
  * Drozdek, A. (2005). Data Structures and Algorithms in C++.
  * Thomson Course Technology.
- * 
- * NOTE: If you're recieving a compiler error in "genBST.h" at    
- *       references to the lines  "top()" and "front()" include 
+ *
+ * NOTE: If you're recieving a compiler error in "genBST.h" at
+ *       references to the lines  "top()" and "front()" include
  *       the following compiler option:
  *
  *         -fpermissive
  */
- 
-using namespace std;  // For cout and string
 
 #include <stdio.h>  // For the C getchar() function
 #include <iostream>
 #include <string>
 
 #include "genBST.h"
+
+using namespace std;  // For cout and string
 
 void integerNodes();
 void floatNodes();
@@ -33,7 +33,7 @@ int main()
 	floatNodes();
 	stringNodes();
 	cout << "Done" << endl;
-	
+
 	return 0;
 }
 
@@ -47,7 +47,7 @@ void integerNodes()
 	bst.insert(2);
 	bst.insert(3);
 	bst.insert(4);
-	
+
 	cout << "The preorder of the list is: ";
 	bst.preorder();
 	cout << endl;
@@ -58,8 +58,8 @@ void integerNodes()
 
 	cout << "The postorder of the list is: ";
 	bst.postorder();
-	cout << endl << endl;	
-	
+	cout << endl << endl;
+
 	cout << "Press any key to continue..." << endl;
 	getchar();
 }
@@ -74,7 +74,7 @@ void floatNodes()
 	bst.insert(3.4);
 	bst.insert(4.7);
 	bst.insert(5.67);
-	
+
 	cout << "The preorder of the list is: ";
 	bst.preorder();
 	cout << endl;
@@ -85,8 +85,8 @@ void floatNodes()
 
 	cout << "The postorder of the list is: ";
 	bst.postorder();
-	cout << endl << endl;	
-	
+	cout << endl << endl;
+
 	cout << "Press any key to continue..." << endl;
 	getchar();
 }
@@ -104,7 +104,7 @@ void stringNodes()
 	bst.insert("the");
 	bst.insert("lazy");
 	bst.insert("dog");
-	
+
 	cout << "The preorder of the list is: ";
 	bst.preorder();
 	cout << endl;
@@ -115,8 +115,8 @@ void stringNodes()
 
 	cout << "The postorder of the list is: ";
 	bst.postorder();
-	cout << endl << endl;	
-	
+	cout << endl << endl;
+
 	cout << "Press any key to continue..." << endl;
 	getchar();
 }
