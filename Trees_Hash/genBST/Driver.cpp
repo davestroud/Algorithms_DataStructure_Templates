@@ -15,6 +15,7 @@
  *         -fpermissive
  */
 
+
 #include <stdio.h>  // For the C getchar() function
 #include <iostream>
 #include <string>
